@@ -1,0 +1,16 @@
+import random
+
+prompt = "\nWelcome to my D20 Roller."
+prompt += "\n(Enter 'R' to roll and 'Q' to quit.) "
+
+active = True
+
+while active:
+    message = input(prompt)
+
+    if message == 'q':
+        active = False
+        print("\nThanks for rolling with me.")
+    else:
+        d20 = random.randint(1, 20)
+        print("\nYou rolled a: " + str(d20))
